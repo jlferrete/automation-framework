@@ -70,4 +70,21 @@ public class Contact_Us_Steps {
         Assert.assertEquals(contactUs_Submission_Message.getText(), "Thank You for your Message!");
     }
 
+    @When("I enter a specific first name {word}")
+    public void i_enter_a_specific_first_name_joe(String firstName) {
+        System.out.println(firstName);
+    }
+    @And("I enter a specific last name {word}")
+    public void i_enter_a_specific_last_name_blogs(String lastName) {
+        System.out.println(lastName);
+    }
+    @And("I enter a specific email address {word}")
+    public void i_enter_a_specific_email_address_joe_blogs123_mail_com(String email) {
+        System.out.println(email);
+    }
+    @And("I enter a specific comment {string}")
+    public void i_enter_a_specific_comment(String comment) {
+        System.out.println(comment);
+    }
+
 }
