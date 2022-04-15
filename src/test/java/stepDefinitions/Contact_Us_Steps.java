@@ -11,7 +11,7 @@ import org.testng.Assert;
 import pageObjects.Base_PO;
 
 public class Contact_Us_Steps extends Base_PO {
-    private final WebDriver driver = getDriver();
+    private WebDriver driver = getDriver();
 
     @Given("I access the webdriver university contact us page")
     public void i_access_the_webdriver_university_contact_us_page() {
@@ -20,7 +20,7 @@ public class Contact_Us_Steps extends Base_PO {
 
     @When("I enter a unique first name")
     public void i_enter_a_unique_first_name() {
-        driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("AutoFN" + generateRandomNumber(5));
+        sendKeys(By.xpath("//input[@name='first_name']"), "AutoFN" + generateRandomNumber(5));
     }
 
     @And("I enter a unique last name")
